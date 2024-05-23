@@ -177,7 +177,6 @@ router.post('/citesCEFecha', async (req, res) => {
         }
     })
 
-
     res.json(Cites);
 })
 
