@@ -6,16 +6,16 @@ const app = express();
 const reportsRoutes = require('./routes/reportsRoutes');
 
 //settings
-app.set('port', 3000);
-
+app.set('port', 3003);
+app.listen(3003, '0.0.0.0')
 //middlewares
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cors());
 app.use(reportsRoutes);
-app.use(cors);
 //run
 app.listen(app.get('port'), () => {
-    console.log('Server Reports Backend Enterprices on Port 3000')
+    console.log('Server Reports Backend Enterprices on Port 3003')
 })
 

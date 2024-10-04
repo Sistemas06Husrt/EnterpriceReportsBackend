@@ -42,7 +42,7 @@ router.get('/citesCE', async (req, res) => {
     GROUP BY obj.ol_l_appointment) prop ON prop.ol_l_appointment=a.ap_key
     LEFT OUTER JOIN  sysadm.property_lovs pvl ON pvl.plv_code=prop.ASEGURADORA
     where 1=1 
-    and a.ap_date between to_date('01/04/2024', 'dd/mm/yyyy') and to_date('30/04/2024', 'dd/mm/yyyy')
+    and a.ap_date between to_date('01/09/2024', 'dd/mm/yyyy') and to_date('30/09/2024', 'dd/mm/yyyy')
     `;
 
     let result = await BD.Open(sql, [], false);
